@@ -16,3 +16,14 @@
  */
 
 params ["_unit"];
+
+_unit setVariable [QGVAR(itemsBackpack), [], true];
+
+private _items = missionNamespace getVariable [QGVAR(WhitelistAllowedMedicItems), ""];
+private _itemarray = [_items, "CfgWeapons", "CfgMagazines"] call FUNC(getList);
+
+{	
+	if !(_x in GVAR(DefaultAllowedMedicItems)) then {
+		GVAR(DefaultAllowedMedicItems) pushback _x; 
+	};
+} forEach _itemarray;

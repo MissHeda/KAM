@@ -433,5 +433,109 @@
             <English>Neck Tourniquet</English>
             <Polish>Staza na szyi</Polish>
         </Key>
+        <Key ID="STR_kat_misc_Medic_Bag_Display">
+            <English>Medic Bag</English>
+            <German>Sanitätstasche</German>
+        </Key>
+        <Key ID="STR_kat_misc_Medic_Bag_Desc">
+            <English>Portable medical item storage</English>
+            <German>Aufbewahrungstasche für medizinische Gegenstände</German>
+        </Key>
+        <Key ID="STR_kat_misc_Medic_Bag_Place_Down">
+            <English>Place Medic Bag</English>
+            <German>Sanitätstasche platzieren</German>
+        </Key>
+        <Key ID="STR_kat_misc_Medic_Bag_Pick_up">
+            <English>Take Medic Bag</English>
+            <German>Sanitätstasche nehmen</German>
+        </Key>
+        <Key ID="STR_kat_misc_Medic_Bag_Sling_on">
+            <English>Sling Medic Bag</English>
+            <German>Sanitätstasche befestigen</German>
+        </Key>
+        <Key ID="STR_kat_misc_Medic_Bag_Sling_on_front">
+            <English>Sling front</English>
+            <German>Vorne befestigen</German>
+        </Key>
+        <Key ID="STR_kat_misc_Medic_Bag_Sling_on_back">
+            <English>Sling back</English>
+            <German>Hinten befestigen</German>
+        </Key>
+        <Key ID="STR_kat_misc_Medic_Bag_Sling_off">
+            <English>Unsling Medic Bag</English>
+            <German>Sanitätstasche ablegen</German>
+        </Key>
+        <Key ID="STR_kat_misc_TransferMedicBagItems">
+            <English>Put Medic Items in Medic Bag</English>
+            <German>Packe Medic Items in die Sanitätstasche</German>
+        </Key>
+        <Key ID="STR_kat_misc_BuildFieldAidStation">
+            <English>Build Field Aid Station</English>
+            <German>Baue Feld Erste Hilfe Station</German>
+        </Key>
+        <Key ID="STR_kat_misc_denyMedicBagPickUp">
+            <English>The Medic Bag has to be empty!</English>
+            <German>Die Sanitätstasche muss leer sein!</German>
+        </Key>
+        <Key ID="STR_kat_misc_RemoveFiledAidStation">
+            <English>Pack Field Aid Station</English>
+            <German>Packe Feld Erste Hilfe Station Zusammen</German>
+        </Key>
+        <Key ID="STR_kat_misc_FieldAidStationProgressBar">
+            <English>Building Field Aid Station</English>
+            <German>Baue Feld Erste Hilfe Station</German>
+        </Key>
+        <Key ID="STR_kat_misc_FieldAidStationBuildFail">
+            <English>Building Field Aid Station Failed</English>
+            <German>Bauen der Feld Erste Hilfe Station Fehlgeschlagen</German>
+        </Key>
+        <Key ID="STR_kat_misc_ItemsRemovedVest">
+            <English>All items from your vest have been removed.</English>
+            <German>Alle Gegenstände aus deiner Veste wurden entfernt.</German>
+        </Key>
+        <Key ID="STR_kat_misc_ItemsRemovedUniform">
+            <English>All items from your unifrom have been removed.</English>
+            <German>Alle Gegenstände aus deiner Uniform wurden entfernt.</German>
+        </Key>
+        <Key ID="STR_kat_misc_ItemsRemovedBackpack">
+            <English>All items from your backpack have been removed.</English>
+            <German>Alle Gegenstände aus deiner Rucksack wurden entfernt.</German>
+        </Key>
+        <Key ID="STR_kat_misc_AttachmentsRemoved">
+            <English>All attachments where removed.</English>
+            <German>Alle Aufsätze wurden entfernt.</German>
+        </Key>
+        <Key ID="STR_kat_misc_removeItemsHint">
+            <English>Items in uniforms/vests/backpacks will be removed if you put them into the Medic Bag!</English>
+            <German>Gegenstände in Uniformen/Vesten/Rucksäcken werden gelöscht sofern diese in die Sanitätstasche gelegt werden!</German>
+        </Key>
+        <Key ID="STR_kat_misc_SETTING_MedicBagHint_Display">
+            <English>Display Medic Bag hint</English>
+            <German>Zeige Sanitätstaschen hinweiß</German>
+        </Key>
+        <Key ID="STR_kat_misc_SETTING_MedicBagHint_Desc">
+            <English>Enables / disabled the hint that pops up when you open the medic bag</English>
+            <German>Zeitgt / verbirgt den hinweiß der Sanitätstasche</German>
+        </Key>
+        <Key ID="STR_kat_misc_SubCategory_Medic_Bag">
+            <English>Medic Bag</English>
+            <German>Sanitätstasche</German>
+        </Key>
+        <Key ID="STR_kat_misc_Add_Allowed_Medical_Item_Display">
+            <English>Add allowed medic Items</English>
+            <German>Hinzufügen von erlaubten medic Gegenständen</German>
+        </Key>
+        <Key ID="STR_kat_misc_Add_Allowed_Medical_Item_Desc">
+            <English>Allows you to add custom items that are allowed in the Medic bag. All KAM/ACE medic items are already added. Example of how to use:  "Titan_AA", "ACE_Banana", "ACE_WaterBottle"</English>
+            <German>Erlaubt dir eigene Gegenstände hinzuzufügen die erlaubt sind in der Sanitätstasche. Alle KAM/ACE Medic Items sind bereits hinzugefügt. Beispiel zur benutzung:  "Titan_AA", "ACE_Banana", "ACE_WaterBottle"</German>
+        </Key>
+        <Key ID="STR_kat_misc_SETTING_MedicBagSize_Display">
+            <English>Medic Bag Inventory Size</English>
+            <German>Sanitätstasche Inventar Größe </German>
+        </Key>
+        <Key ID="STR_kat_misc_SETTING_MedicBagSize_Desc">
+            <English>Changes the size of the medic bag inventory. (min: 200 Field pack, max: 1440 3x Bergen backpack</English>
+            <German></German>
+        </Key>
     </Package>
 </Project>
