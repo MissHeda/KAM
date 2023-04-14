@@ -195,7 +195,7 @@ class CfgVehicles {
 
                 class GVAR(SLINGOPTIONS) {
                     displayName = CSTRING(Medic_Bag_Sling_on);
-                    condition = QUOTE((!(_player getVariable[QQGVAR(hasMedicBagSlinged), false])) && !(_target getVariable [ARR_2(QQGVAR(FieldAidStationIsBuild), false)]));
+                    condition = QUOTE((!(_player getVariable[ARR_2(QQGVAR(hasMedicBagSlinged), false)])) && !(_target getVariable [ARR_2(QQGVAR(FieldAidStationIsBuild), false)]));
                     exceptions[] = {"isNotSwimming", "isNotInside", "notOnMap", "isNotSitting"};
                     statement = "";
                     showDisabled = 0;
@@ -222,7 +222,7 @@ class CfgVehicles {
 
                 class GVAR(TransferMedicItems) {
                     displayName = CSTRING(TransferMedicBagItems);
-                    condition = QUOTE(!(_player getVariable[QQGVAR(hasMedicBagSlinged), false]));
+                    condition = QUOTE(!(_player getVariable [ARR_2(QQGVAR(hasMedicBagSlinged), false)]));
                     exceptions[] = {"isNotSwimming", "isNotInside", "notOnMap", "isNotSitting"};
                     statement = QUOTE([ARR_2(_player, _target)] call FUNC(putItemsInMedicBag));
                     showDisabled = 0;
