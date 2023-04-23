@@ -18,6 +18,10 @@
 params ["_unit"];
 
 _unit setVariable [QGVAR(itemsBackpack), [], true];
+_unit setVariable [QGVAR(isLeftArmFree), true, true];
+_unit setVariable [QGVAR(isRightArmFree), true, true];
+_unit setVariable [QGVAR(isLeftLegFree), true, true];
+_unit setVariable [QGVAR(isRightLegFree), true, true];
 
 private _items = missionNamespace getVariable [QGVAR(WhitelistAllowedMedicItems), ""];
 private _itemarray = [_items, "CfgWeapons", "CfgMagazines"] call FUNC(getList);

@@ -7,5 +7,6 @@ if (typeOf _container == "Medic_Bag_Crate") exitwith {
 	if (GVAR(showMedicBagHint)) then {
 		hint LLSTRING(removeItemsHint);
 	};
-		_container say3D QGVAR(BagZip);
+	
+	_container say3D QGVAR(BagZip);
 };

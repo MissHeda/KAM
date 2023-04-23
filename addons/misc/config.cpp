@@ -35,6 +35,7 @@ class CfgPatches {
 };
 
 #include "CfgMoves.hpp"
+#include "CfgSounds.hpp"
 #include "CfgFunctions.hpp"
 #include "CfgGlasses.hpp"
 #include "CfgEventHandlers.hpp"

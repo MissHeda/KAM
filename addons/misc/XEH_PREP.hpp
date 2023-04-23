@@ -22,6 +22,8 @@ PREP(medicBagSpawn);
 PREP(medicBagSling);
 PREP(putItemsInMedicBag);
 PREP(getList);
+
+
 PREP(buildFieldAidStation);
 PREP(removeFieldAidStation);
 PREP(checkMedBagCount);
@@ -34,3 +36,4 @@ PREP(putItemsInMedicBag);
 PREP(removeFieldAidStation);
 PREP(openInventory);
 PREP(slingArmband);
+PREP(unSlingArmband);
