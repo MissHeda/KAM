@@ -10,7 +10,7 @@ switch (_limbnumber) do
 	case 0: { 
 		private	_objectLA = _unit getVariable [QGVAR(whichArmabndisSlinged), ObjNull];
 
-		switch (_objectLA) do
+		switch (typeOf _objectLA) do
 		{
 			case "Kat_armbandWC": {
 				if (_unit canAdd "Kat_armband_facewear") then {

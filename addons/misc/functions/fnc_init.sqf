@@ -24,6 +24,8 @@ _unit setVariable [QGVAR(isLeftArmFree), true, true];
 _unit setVariable [QGVAR(isRightArmFree), true, true];
 _unit setVariable [QGVAR(isLeftLegFree), true, true];
 _unit setVariable [QGVAR(isRightLegFree), true, true];
+_unit addEventHandler ["Put", LINKFUNC(checkOnlyMedicItems)];
+_unit addEventHandler ["InventoryOpened", LINKFUNC(openInventory)];
 
 private _items = missionNamespace getVariable [QGVAR(WhitelistAllowedMedicItems), ""];
 private _itemarray = [_items, "CfgWeapons", "CfgMagazines"] call FUNC(getList);
@@ -33,4 +35,3 @@ private _itemarray = [_items, "CfgWeapons", "CfgMagazines"] call FUNC(getList);
 		GVAR(DefaultAllowedMedicItems) pushback _x; 
 	};
 } forEach _itemarray;
-
