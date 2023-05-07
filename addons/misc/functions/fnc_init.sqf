@@ -15,7 +15,9 @@
  * Public: No
  */
 
-params ["_unit"];
+params ["_unit", ["_isRespawn", true]];
+
+if (!local _unit) exitWith {};
 
 _unit setVariable [QGVAR(itemsBackpack), [], true];
 _unit setVariable [QGVAR(isLeftArmFree), true, true];
@@ -31,3 +33,4 @@ private _itemarray = [_items, "CfgWeapons", "CfgMagazines"] call FUNC(getList);
 		GVAR(DefaultAllowedMedicItems) pushback _x; 
 	};
 } forEach _itemarray;
+
