@@ -12,34 +12,28 @@ switch (_limbnumber) do
 
 		switch (typeOf _objectLA) do
 		{
-			case "Kat_armbandWC": {
-				if (_unit canAdd "Kat_armband_facewear") then {
-					_unit addItem "Kat_armband_facewear";
-					_unit setVariable [QGVAR(isLeftArmFree), true, true];
-					deleteVehicle _objectLA;
-				} else {
-					hint "Not enoght space!";  //do string later!
-				};
+			case "Kat_armbandRC": {
+				[_unit, "kat_armband_red_cross"] call ACEFUNC(common,addToInventory);
+				_unit setVariable [QGVAR(isLeftArmFree), true, true];
+				deleteVehicle _objectLA;
 			};
 
-			case "Kat_armbandWCM": {
-				if (_unit canAdd "Kat_armband_facewear") then { //change item
-					_unit addItem "Kat_armband_facewear";
-					_unit setVariable [QGVAR(isRightArmFree), true, true];
-					deleteVehicle _objectLA;
-				} else {
-					hint "Not enoght space!";  //do string later!
-				};
+			case "Kat_armbandRCM": {
+				[_unit, "kat_armband_medic"] call ACEFUNC(common,addToInventory);
+				_unit setVariable [QGVAR(isRightArmFree), true, true];
+				deleteVehicle _objectLA;
 			};
 
-			case "Kat_armbandWCD": {
-				if (_unit canAdd "Kat_armband_facewear") then { //change item
-					_unit addItem "Kat_armband_facewear";
-					_unit setVariable [QGVAR(isLeftLegFree), true, true];
-					deleteVehicle _objectLA;
-				} else {
-					hint "Not enoght space!";  //do string later!
-				};
+			case "Kat_armbandRCD": {
+				[_unit, "kat_armband_doctor"] call ACEFUNC(common,addToInventory);
+				_unit setVariable [QGVAR(isLeftLegFree), true, true];
+				deleteVehicle _objectLA;
+			};
+
+			case "Kat_armbandKAT": {
+				[_unit, "kat_armband_kat"] call ACEFUNC(common,addToInventory);
+				_unit setVariable [QGVAR(isLeftLegFree), true, true];
+				deleteVehicle _objectLA;
 			};
 		};
 	};
@@ -47,34 +41,30 @@ switch (_limbnumber) do
 	case 1: {
 		private	_objectRA = _unit getVariable [QGVAR(whichArmabndisSlinged), ObjNull];
 
-		switch (_objectRA) do
+		switch (typeOf _objectRA) do
 		{
-			case "Kat_armbandWC": {
-				if (_unit canAdd "Kat_armband_facewear") then {
-					_unit addItem "Kat_armband_facewear";
-					_unit setVariable [QGVAR(isRightLegFree), true, true];
-					deleteVehicle _objectRA;
-				} else {
-					hint "Not enoght space!";  //do string later!
-				};
+			case "Kat_armbandRC": {
+				[_unit, "kat_armband_red_cross"] call ACEFUNC(common,addToInventory);
+				_unit setVariable [QGVAR(isRightArmFree), true, true];
+				deleteVehicle _objectRA;
 			};
 
-			case "Kat_armbandWCM": {
-				if (_unit canAdd "Kat_armband_facewear") then { //change item
-					_unit addItem "Kat_armband_facewear";
-					deleteVehicle _objectRA;
-				} else {
-					hint "Not enoght space!";  //do string later!
-				};
+			case "Kat_armbandRCM": {
+				[_unit, "kat_armband_medic"] call ACEFUNC(common,addToInventory);
+				_unit setVariable [QGVAR(isRightArmFree), true, true];
+				deleteVehicle _objectRA;
 			};
 
-			case "Kat_armbandWCD": {
-				if (_unit canAdd "Kat_armband_facewear") then { //change item
-					_unit addItem "Kat_armband_facewear";
-					deleteVehicle _objectRA;
-				} else {
-					hint "Not enoght space!";  //do string later!
-				};
+			case "Kat_armbandRCD": {
+				[_unit, "kat_armband_doctor"] call ACEFUNC(common,addToInventory);
+				_unit setVariable [QGVAR(isRightArmFree), true, true];
+				deleteVehicle _objectRA;
+			};
+
+			case "Kat_armbandKAT": {
+				[_unit, "kat_armband_kat"] call ACEFUNC(common,addToInventory);
+				_unit setVariable [QGVAR(isRightArmFree), true, true];
+				deleteVehicle _objectRA;
 			};
 		};
 	};
@@ -82,33 +72,30 @@ switch (_limbnumber) do
 	case 2: {
 		private	_objectLL = _unit getVariable [QGVAR(whichArmabndisSlinged), ObjNull];
 
-		switch (_objectLL) do
+		switch (typeOf _objectLL) do
 		{
-			case "Kat_armbandWC": {
-				if (_unit canAdd "Kat_armband_facewear") then {
-					_unit addItem "Kat_armband_facewear";
-					deleteVehicle _objectLL;
-				} else {
-					hint "Not enoght space!";  //do string later!
-				};
+			case "Kat_armbandRC": {
+				[_unit, "kat_armband_red_cross"] call ACEFUNC(common,addToInventory);
+				_unit setVariable [QGVAR(isLeftLegFree), true, true];
+				deleteVehicle _objectLL;
 			};
 
-			case "Kat_armbandWCM": {
-				if (_unit canAdd "Kat_armband_facewear") then { //change item
-					_unit addItem "Kat_armband_facewear";
-					deleteVehicle _objectLL;
-				} else {
-					hint "Not enoght space!";  //do string later!
-				};
+			case "Kat_armbandRCM": {
+				[_unit, "kat_armband_medic"] call ACEFUNC(common,addToInventory);
+				_unit setVariable [QGVAR(isLeftLegFree), true, true];
+				deleteVehicle _objectLL;
 			};
 
-			case "Kat_armbandWCD": {
-				if (_unit canAdd "Kat_armband_facewear") then { //change item
-					_unit addItem "Kat_armband_facewear";
-					deleteVehicle _objectLL;
-				} else {
-					hint "Not enoght space!";  //do string later!
-				};
+			case "Kat_armbandRCD": {
+				[_unit, "kat_armband_doctor"] call ACEFUNC(common,addToInventory);
+				_unit setVariable [QGVAR(isLeftLegFree), true, true];
+				deleteVehicle _objectLL;
+			};
+
+			case "Kat_armbandKAT": {
+				[_unit, "kat_armband_kat"] call ACEFUNC(common,addToInventory);
+				_unit setVariable [QGVAR(isLeftLegFree), true, true];
+				deleteVehicle _objectLL;
 			};
 		};
 	};
@@ -116,33 +103,30 @@ switch (_limbnumber) do
 	case 3: {
 		private	_objectRL = _unit getVariable [QGVAR(whichArmabndisSlinged), ObjNull];
 
-		switch (_objectRL) do
+		switch (typeOf _objectRL) do
 		{
-			case "Kat_armbandWC": {
-				if (_unit canAdd "Kat_armband_facewear") then {
-					_unit addItem "Kat_armband_facewear";
-					deleteVehicle _objectRL;
-				} else {
-					hint "Not enoght space!";  //do string later!
-				};
+			case "Kat_armbandRC": {
+				[_unit, "kat_armband_red_cross"] call ACEFUNC(common,addToInventory);
+				_unit setVariable [QGVAR(isRightLegFree), true, true];
+				deleteVehicle _objectRL;
 			};
 
-			case "Kat_armbandWCM": {
-				if (_unit canAdd "Kat_armband_facewear") then { //change item
-					_unit addItem "Kat_armband_facewear";
-					deleteVehicle _objectRL;
-				} else {
-					hint "Not enoght space!";  //do string later!
-				};
+			case "Kat_armbandRCM": {
+				[_unit, "kat_armband_medic"] call ACEFUNC(common,addToInventory);
+				_unit setVariable [QGVAR(isRightLegFree), true, true];
+				deleteVehicle _objectRL;
 			};
 
-			case "Kat_armbandWCD": {
-				if (_unit canAdd "Kat_armband_facewear") then { //change item
-					_unit addItem "Kat_armband_facewear";
-					deleteVehicle _objectRL;
-				} else {
-					hint "Not enoght space!";  //do string later!
-				};
+			case "Kat_armbandRCD": {
+				[_unit, "kat_armband_doctor"] call ACEFUNC(common,addToInventory);
+				_unit setVariable [QGVAR(isRightLegFree), true, true];
+				deleteVehicle _objectRL;
+			};
+
+			case "Kat_armbandKAT": {
+				[_unit, "kat_armband_kat"] call ACEFUNC(common,addToInventory);
+				_unit setVariable [QGVAR(isRightLegFree), true, true];
+				deleteVehicle _objectRL;
 			};
 		};
 	};

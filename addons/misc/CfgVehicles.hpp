@@ -304,7 +304,7 @@ class CfgVehicles {
 		icon = "iconCrateWpns";
 	};
     class Items_base_F;
-	class Kat_armbandWC: Items_base_F {
+	class Kat_armbandRC: Items_base_F {
 		scope = 2;
         scopeCurator = 2;
         scopeArsenal = 2;
@@ -313,7 +313,7 @@ class CfgVehicles {
         model = QPATHTOF(models\armband\Armband.p3d);
 	};
     class Items_base_F;
-	class Kat_armbandWCM: Items_base_F {
+	class Kat_armbandRCM: Items_base_F {
 		scope = 2;
         scopeCurator = 2;
         scopeArsenal = 2;
@@ -322,7 +322,7 @@ class CfgVehicles {
         model = QPATHTOF(models\armband\Armband.p3d); //TODO
 	};
     class Items_base_F;
-	class Kat_armbandWCD: Items_base_F {
+	class Kat_armbandRCD: Items_base_F {
 		scope = 2;
         scopeCurator = 2;
         scopeArsenal = 2;
@@ -348,7 +348,7 @@ class CfgVehicles {
 
                 class SlingArmband {
 					displayName = "Sling Armband";   //TODO
-					condition = QUOTE([ARR_2(_player, ""Kat_armband_facewear"")] call ACEFUNC(common,hasItem) || [ARR_2(_player, ""HIER NEUES ARMAND ITEM"")] call ACEFUNC(common,hasItem) || [ARR_2(_player, ""HIER NEUES ARMAND ITEM"")] call ACEFUNC(common,hasItem));
+					condition = QUOTE([ARR_2(_player, ""kat_armband_red_cross"")] call ACEFUNC(common,hasItem) || [ARR_2(_player, ""HIER NEUES ARMAND ITEM"")] call ACEFUNC(common,hasItem) || [ARR_2(_player, ""HIER NEUES ARMAND ITEM"")] call ACEFUNC(common,hasItem));
 					statement = "";
 					icon = QPATHTOF(ui\MedicBagIcon.paa); //TODO
 					showDisabled = 1;
@@ -357,7 +357,7 @@ class CfgVehicles {
                         displayName = "Left Arm";
                         condition = QUOTE(_player getVariable [ARR_2(QQGVAR(isLeftArmFree), false)]);
                         exceptions[] = {"isNotSwimming", "isNotInside", "notOnMap", "isNotSitting"};
-                        statement = QUOTE([ARR_3(_player, ""Kat_armband_facewear"", 0)] call FUNC(slingArmband));
+                        statement = QUOTE([ARR_3(_player, ""kat_armband_red_cross"", 0)] call FUNC(slingArmband));
                         showDisabled = 0;
                         icon = QPATHTOF(ui\MedicBagSling.paa); //TODO
                     }; 
@@ -366,7 +366,7 @@ class CfgVehicles {
                         displayName = "Right Arm";
                         condition = QUOTE(_player getVariable [ARR_2(QQGVAR(isRightArmFree), false)]);
                         exceptions[] = {"isNotSwimming", "isNotInside", "notOnMap", "isNotSitting"};
-                        statement = QUOTE([ARR_3(_player, ""Kat_armband_facewear"", 1)] call FUNC(slingArmband));
+                        statement = QUOTE([ARR_3(_player, ""kat_armband_red_cross"", 1)] call FUNC(slingArmband));
                         showDisabled = 0;
                         icon = QPATHTOF(ui\MedicBagSling.paa); //TODO
                     }; 
@@ -375,7 +375,7 @@ class CfgVehicles {
                         displayName = "Left Leg";
                         condition = QUOTE(_player getVariable [ARR_2(QQGVAR(isLeftLegFree), false)]);
                         exceptions[] = {"isNotSwimming", "isNotInside", "notOnMap", "isNotSitting"};
-                        statement = QUOTE([ARR_3(_player, ""Kat_armband_facewear"", 2)] call FUNC(slingArmband));
+                        statement = QUOTE([ARR_3(_player, ""kat_armband_red_cross"", 2)] call FUNC(slingArmband));
                         showDisabled = 0;
                         icon = QPATHTOF(ui\MedicBagSling.paa); //TODO
                     }; 
@@ -384,7 +384,7 @@ class CfgVehicles {
                         displayName = "Right Leg";
                         condition = QUOTE(_player getVariable [ARR_2(QQGVAR(isRightLegFree), false)]);
                         exceptions[] = {"isNotSwimming", "isNotInside", "notOnMap", "isNotSitting"};
-                        statement = QUOTE([ARR_3(_player, ""Kat_armband_facewear"", 3)] call FUNC(slingArmband));
+                        statement = QUOTE([ARR_3(_player, ""kat_armband_red_cross"", 3)] call FUNC(slingArmband));
                         showDisabled = 0;
                         icon = QPATHTOF(ui\MedicBagSling.paa); //TODO
                     }; 
