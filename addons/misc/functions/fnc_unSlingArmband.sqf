@@ -20,19 +20,19 @@ switch (_limbnumber) do
 
 			case "Kat_armbandRCM": {
 				[_unit, "kat_armband_medic"] call ACEFUNC(common,addToInventory);
-				_unit setVariable [QGVAR(isRightArmFree), true, true];
+				_unit setVariable [QGVAR(isLeftArmFree), true, true];
 				deleteVehicle _objectLA;
 			};
 
 			case "Kat_armbandRCD": {
 				[_unit, "kat_armband_doctor"] call ACEFUNC(common,addToInventory);
-				_unit setVariable [QGVAR(isLeftLegFree), true, true];
+				_unit setVariable [QGVAR(isLeftArmFree), true, true];
 				deleteVehicle _objectLA;
 			};
 
 			case "Kat_armbandKAT": {
 				[_unit, "kat_armband_kat"] call ACEFUNC(common,addToInventory);
-				_unit setVariable [QGVAR(isLeftLegFree), true, true];
+				_unit setVariable [QGVAR(isLeftArmFree), true, true];
 				deleteVehicle _objectLA;
 			};
 		};
