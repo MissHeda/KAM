@@ -311,24 +311,28 @@ class CfgVehicles {
 		author = "Miss Heda, vccv9040 (Swedish Forces Pack)";
         editorPreview = QPATHTOF(ui\ArmbandWhiteCross.paa);
         model = QPATHTOF(models\armband\Armband.p3d);
+        hiddenSelectionsTextures[] = {QPATHTOF(models\armband\ArmbandWC.paa)};
 	};
     class Items_base_F;
-	class Kat_armbandRCM: Items_base_F {
-		scope = 2;
-        scopeCurator = 2;
-        scopeArsenal = 2;
+	class Kat_armbandRCM: Kat_armbandRC {
 		author = "Miss Heda, vccv9040 (Swedish Forces Pack)";
-        editorPreview = QPATHTOF(ui\ArmbandWhiteCross.paa); //TODO
-        model = QPATHTOF(models\armband\Armband.p3d); //TODO
+        editorPreview = QPATHTOF(ui\ArmbandWhiteCrossMedic.paa);
+        model = QPATHTOF(models\armband\Armband.p3d);
+        hiddenSelectionsTextures[] = {QPATHTOF(models\armband\ArmbandWCM.paa)};
 	};
     class Items_base_F;
-	class Kat_armbandRCD: Items_base_F {
-		scope = 2;
-        scopeCurator = 2;
-        scopeArsenal = 2;
+	class Kat_armbandRCD: Kat_armbandRC {
 		author = "Miss Heda, vccv9040 (Swedish Forces Pack)";
-        editorPreview = QPATHTOF(ui\ArmbandWhiteCross.paa); //TODO
-        model = QPATHTOF(models\armband\Armband.p3d); //TODO
+        editorPreview = QPATHTOF(ui\ArmbandWhiteCrossDoctor.paa);
+        model = QPATHTOF(models\armband\Armband.p3d);
+        hiddenSelectionsTextures[] = {QPATHTOF(models\armband\ArmbandWCD.paa)};
+	};
+    class Items_base_F;
+	class Kat_armbandKAT: Kat_armbandRC {
+		author = "Miss Heda, vccv9040 (Swedish Forces Pack)";
+        editorPreview = QPATHTOF(ui\ArmbandKat.paa);
+        model = QPATHTOF(models\armband\Armband.p3d);
+        hiddenSelectionsTextures[] = {QPATHTOF(models\armband\ArmbandKAT.paa)};
 	};
     class Man;
     class CAManBase: Man {
