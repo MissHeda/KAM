@@ -1,30 +1,46 @@
 #include "script_component.hpp"
+/*
+ * Author: Miss Heda
+ * Unattaches a armband from a previously attached limb.
+ *
+ * Arguments:
+ * 0: Player <OBJECT>
+ * 1: Number
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * [player, 0] call kat_misc_fnc_slingArmband;
+ *
+ * Public: No
+ */
 
 params [
-	"_unit",
-	"_limbnumber"
+    "_unit",
+    "_limbnumber"
 ];
 
 switch (_limbnumber) do 
 {
-	case 0: { 
-		private	_objectLA = _unit getVariable [QGVAR(whichArmabndisSlinged), ObjNull];
+    case 0: { 
+        private	_objectLA = _unit getVariable [QGVAR(whichArmabndisSlinged), ObjNull];
 
-		switch (typeOf _objectLA) do
-		{
-			case "Kat_armbandRC": {
-				[_unit, "kat_armband_red_cross"] call ACEFUNC(common,addToInventory);
-				_unit setVariable [QGVAR(isLeftArmFree), true, true];
-				deleteVehicle _objectLA;
-			};
+        switch (typeOf _objectLA) do
+        {
+            case "Kat_armbandRC": {
+                [_unit, "kat_armband_red_cross"] call ACEFUNC(common,addToInventory);
+                _unit setVariable [QGVAR(isLeftArmFree), true, true];
+                deleteVehicle _objectLA;
+            };
 
-			case "Kat_armbandRCM": {
-				[_unit, "kat_armband_medic"] call ACEFUNC(common,addToInventory);
-				_unit setVariable [QGVAR(isLeftArmFree), true, true];
-				deleteVehicle _objectLA;
-			};
+            case "Kat_armbandRCM": {
+                [_unit, "kat_armband_medic"] call ACEFUNC(common,addToInventory);
+                _unit setVariable [QGVAR(isLeftArmFree), true, true];
+                deleteVehicle _objectLA;
+            };
 
-			case "Kat_armbandRCD": {
+                case "Kat_armbandRCD": {
 				[_unit, "kat_armband_doctor"] call ACEFUNC(common,addToInventory);
 				_unit setVariable [QGVAR(isLeftArmFree), true, true];
 				deleteVehicle _objectLA;
