@@ -37,3 +37,4 @@ PREP(removeFieldAidStation);
 PREP(openInventory);
 PREP(slingArmband);
 PREP(unSlingArmband);
+PREP(getVariableList);

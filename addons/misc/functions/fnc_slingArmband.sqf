@@ -1,10 +1,17 @@
 #include "script_component.hpp"
 
-params [
-	"_unit",
-	"_armbanditem",
-	"_limbnumber"
-];
+params ["_unit", "_armbanditem", "_limbnumber"];
+
+private _str = missionNamespace getVariable [QGVAR(armbandSlingLeftArm), ""];
+private _array = [_str] call FUNC(getVariableList);
+_unit setVariable [QGVAR(armbandSlingLeftArmPos), _array, true];
+
+
+
+
+
+
+
 
 switch (_limbnumber) do 
 {
@@ -14,8 +21,8 @@ switch (_limbnumber) do
 		{
 			case "kat_armband_red_cross": { 
 				_armbandLA = "Kat_armbandRC" createVehicle position _unit;
-				_armbandLA attachTo [_unit,[-0.228,-0.087,-0.45],"leftforearm",true];
-				[_armbandLA, [5,-5,-5]] call BIS_fnc_setObjectRotation;	
+				_armbandLA attachTo [_unit,_unit getVariable [QGVAR(armbandSlingLeftArmPos), [0,0,0]],"leftforearm",true];
+				[_armbandLA, [5,-5,-5]] call BIS_fnc_setObjectRotation;
 
 				_unit removeItem _armbanditem;
 				_unit setVariable [QGVAR(isLeftArmFree), false, true];
@@ -24,7 +31,7 @@ switch (_limbnumber) do
 
 			case "kat_armband_medic": {
 				_armbandLA = "Kat_armbandRCM" createVehicle position _unit;
-				_armbandLA attachTo [_unit,[-0.228,-0.087,-0.45],"leftforearm",true];
+				_armbandLA attachTo [_unit,_unit getVariable [QGVAR(armbandSlingLeftArmPos), [0,0,0]],"leftforearm",true];
 				[_armbandLA, [5,-5,-5]] call BIS_fnc_setObjectRotation;	
 
 				_unit removeItem _armbanditem;
@@ -34,7 +41,7 @@ switch (_limbnumber) do
 
 			case "kat_armband_doctor": {
 				_armbandLA = "Kat_armbandRCD" createVehicle position _unit;
-				_armbandLA attachTo [_unit,[-0.228,-0.087,-0.45],"leftforearm",true];
+				_armbandLA attachTo [_unit,_unit getVariable [QGVAR(armbandSlingLeftArmPos), [0,0,0]],"leftforearm",true];
 				[_armbandLA, [5,-5,-5]] call BIS_fnc_setObjectRotation;	
 
 				_unit removeItem _armbanditem;
@@ -44,7 +51,7 @@ switch (_limbnumber) do
 
 			case "kat_armband_kat": {
 				_armbandLA = "Kat_armbandKAT" createVehicle position _unit;
-				_armbandLA attachTo [_unit,[-0.228,-0.087,-0.45],"leftforearm",true];
+				_armbandLA attachTo [_unit,_unit getVariable [QGVAR(armbandSlingLeftArmPos), [0,0,0]],"leftforearm",true];
 				[_armbandLA, [5,-5,-5]] call BIS_fnc_setObjectRotation;	
 
 				_unit removeItem _armbanditem;
@@ -60,7 +67,7 @@ switch (_limbnumber) do
 		{
 			case "kat_armband_red_cross": { 
 				_armbandRA = "Kat_armbandRC" createVehicle position _unit;
-				_armbandRA attachTo [_unit,[-0.228,-0.087,-0.45],"rightforearm",true];  //ADD CBA setting for adjustments
+				_armbandRA attachTo [_unit,_unit getVariable [QGVAR(armbandSlingRightArmPos), [0,0,0]],"rightforearm",true];  //ADD CBA setting for adjustments
 				[_armbandRA, [5,-5,-5]] call BIS_fnc_setObjectRotation;		//ADD CBA setting for adjustments
 
 				_unit removeItem _armbanditem;
@@ -70,7 +77,7 @@ switch (_limbnumber) do
 
 			case "kat_armband_medic": {
 				_armbandRA = "Kat_armbandRCM" createVehicle position _unit;
-				_armbandRA attachTo [_unit,[-0.228,-0.087,-0.45],"rightforearm",true];  //ADD CBA setting for adjustments
+				_armbandRA attachTo [_unit,_unit getVariable [QGVAR(armbandSlingRightArmPos), [0,0,0]],"rightforearm",true];  //ADD CBA setting for adjustments
 				[_armbandRA, [5,-5,-5]] call BIS_fnc_setObjectRotation;		//ADD CBA setting for adjustments
 
 				_unit removeItem _armbanditem;
@@ -80,7 +87,7 @@ switch (_limbnumber) do
 
 			case "kat_armband_doctor": {
 				_armbandRA = "Kat_armbandRCD" createVehicle position _unit;
-				_armbandRA attachTo [_unit,[-0.228,-0.087,-0.45],"rightforearm",true];  //ADD CBA setting for adjustments
+				_armbandRA attachTo [_unit,_unit getVariable [QGVAR(armbandSlingRightArmPos), [0,0,0]],"rightforearm",true];  //ADD CBA setting for adjustments
 				[_armbandRA, [5,-5,-5]] call BIS_fnc_setObjectRotation;		//ADD CBA setting for adjustments
 
 				_unit removeItem _armbanditem;
@@ -90,7 +97,7 @@ switch (_limbnumber) do
 
 			case "kat_armband_kat": {
 				_armbandRA = "Kat_armbandKAT" createVehicle position _unit;
-				_armbandRA attachTo [_unit,[-0.228,-0.087,-0.45],"rightforearm",true];  //ADD CBA setting for adjustments
+				_armbandRA attachTo [_unit,_unit getVariable [QGVAR(armbandSlingRightArmPos), [0,0,0]],"rightforearm",true];  //ADD CBA setting for adjustments
 				[_armbandRA, [5,-5,-5]] call BIS_fnc_setObjectRotation;		//ADD CBA setting for adjustments
 
 				_unit removeItem _armbanditem;
@@ -106,7 +113,7 @@ switch (_limbnumber) do
 		{
 			case "kat_armband_red_cross": { 
 				_armbandLL = "Kat_armbandRC" createVehicle position _unit;
-				_armbandLL attachTo [_unit,[0.435,-0.075,-0.38],"LeftUpLeg",true];  
+				_armbandLL attachTo [_unit,_unit getVariable [QGVAR(armbandSlingLeftLegPos), [0,0,0]],"LeftUpLeg",true];  
 				[_armbandLL, [-160,-5,45]] call BIS_fnc_setObjectRotation;
 
 				_unit removeItem _armbanditem;
@@ -116,7 +123,7 @@ switch (_limbnumber) do
 
 			case "kat_armband_medic": {
 				_armbandLL = "Kat_armbandRCM" createVehicle position _unit;
-				_armbandLL attachTo [_unit,[0.435,-0.075,-0.38],"LeftUpLeg",true];  
+				_armbandLL attachTo [_unit,_unit getVariable [QGVAR(armbandSlingLeftLegPos), [0,0,0]],"LeftUpLeg",true];  
 				[_armbandLL, [-160,-5,45]] call BIS_fnc_setObjectRotation;
 
 				_unit removeItem _armbanditem;
@@ -126,7 +133,7 @@ switch (_limbnumber) do
 
 			case "kat_armband_doctor": {
 				_armbandLL = "Kat_armbandRCD" createVehicle position _unit;
-				_armbandLL attachTo [_unit,[0.435,-0.075,-0.38],"LeftUpLeg",true];  
+				_armbandLL attachTo [_unit,_unit getVariable [QGVAR(armbandSlingLeftLegPos), [0,0,0]],"LeftUpLeg",true];  
 				[_armbandLL, [-160,-5,45]] call BIS_fnc_setObjectRotation;
 
 				_unit removeItem _armbanditem;
@@ -136,7 +143,7 @@ switch (_limbnumber) do
 
 			case "kat_armband_kat": {
 				_armbandLL = "Kat_armbandKAT" createVehicle position _unit;
-				_armbandLL attachTo [_unit,[0.435,-0.075,-0.38],"LeftUpLeg",true];  
+				_armbandLL attachTo [_unit,_unit getVariable [QGVAR(armbandSlingLeftLegPos), [0,0,0]],"LeftUpLeg",true];  
 				[_armbandLL, [-160,-5,45]] call BIS_fnc_setObjectRotation;
 
 				_unit removeItem _armbanditem;
@@ -152,7 +159,7 @@ switch (_limbnumber) do
 		{
 			case "kat_armband_red_cross": { 
 				_armbandRL = "Kat_armbandRC" createVehicle position _unit;
-				_armbandRL attachTo [_unit,[-0.32,-0.29,-0.42],"RightUpLeg",true];  //ADD CBA setting for adjustments
+				_armbandRL attachTo [_unit,_unit getVariable [QGVAR(armbandSlingRightLegPos), [0,0,0]],"RightUpLeg",true];  //ADD CBA setting for adjustments
 				[_armbandRL, [-30,-5,38]] call BIS_fnc_setObjectRotation;	//ADD CBA setting for adjustments
 
 				_unit removeItem _armbanditem;
@@ -162,7 +169,7 @@ switch (_limbnumber) do
 
 			case "kat_armband_medic": {
 				_armbandRL = "Kat_armbandRCM" createVehicle position _unit;
-				_armbandRL attachTo [_unit,[-0.32,-0.29,-0.42],"RightUpLeg",true];  //ADD CBA setting for adjustments
+				_armbandRL attachTo [_unit,_unit getVariable [QGVAR(armbandSlingRightLegPos), [0,0,0]],"RightUpLeg",true];  //ADD CBA setting for adjustments
 				[_armbandRL, [-30,-5,38]] call BIS_fnc_setObjectRotation;	//ADD CBA setting for adjustments
 
 				_unit removeItem _armbanditem;
@@ -172,7 +179,7 @@ switch (_limbnumber) do
 
 			case "kat_armband_doctor": {
 				_armbandRL = "Kat_armbandRCD" createVehicle position _unit;
-				_armbandRL attachTo [_unit,[-0.32,-0.29,-0.42],"RightUpLeg",true];  //ADD CBA setting for adjustments
+				_armbandRL attachTo [_unit,_unit getVariable [QGVAR(armbandSlingRightLegPos), [0,0,0]],"RightUpLeg",true];  //ADD CBA setting for adjustments
 				[_armbandRL, [-30,-5,38]] call BIS_fnc_setObjectRotation;	//ADD CBA setting for adjustments
 
 				_unit removeItem _armbanditem;
@@ -182,7 +189,7 @@ switch (_limbnumber) do
 
 			case "kat_armband_kat": {
 				_armbandRL = "Kat_armbandKAT" createVehicle position _unit;
-				_armbandRL attachTo [_unit,[-0.32,-0.29,-0.42],"RightUpLeg",true];  //ADD CBA setting for adjustments
+				_armbandRL attachTo [_unit,_unit getVariable [QGVAR(armbandSlingRightLegPos), [0,0,0]],"RightUpLeg",true];  //ADD CBA setting for adjustments
 				[_armbandRL, [-30,-5,38]] call BIS_fnc_setObjectRotation;	//ADD CBA setting for adjustments
 
 				_unit removeItem _armbanditem;

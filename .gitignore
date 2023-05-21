@@ -80,3 +80,5 @@ keys/*
 ####
 hemtt.exe
 ArmaScriptCompiler.exe
+.hemtt/project.toml
+.hemtt/project.toml

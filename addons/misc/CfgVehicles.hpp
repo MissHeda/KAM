@@ -351,226 +351,226 @@ class CfgVehicles {
 				};
 
                 class Armband {
-					displayName = "Armband";   //TODO
+					displayName = CSTRING(Armband_Sling);
 					condition = QUOTE([ARR_2(_player, ""kat_armband_red_cross"")] call ACEFUNC(common,hasItem) || [ARR_2(_player, ""kat_armband_medic"")] call ACEFUNC(common,hasItem) || [ARR_2(_player, ""kat_armband_doctor"")] call ACEFUNC(common,hasItem) || [ARR_2(_player, ""kat_armband_kat"")] call ACEFUNC(common,hasItem) || !(_player getVariable [ARR_2(QQGVAR(isLeftArmFree), false)]) || !(_player getVariable [ARR_2(QQGVAR(isRightArmFree), false)]) || !(_player getVariable [ARR_2(QQGVAR(isLeftLegFree), false)]) || !(_player getVariable [ARR_2(QQGVAR(isRightLegFree), false)]));
 					statement = "";
-					icon = QPATHTOF(ui\ArmbandWhiteCross.paa); //TODO
+					icon = QPATHTOF(ui\ArmbandWhiteCross.paa);
 					showDisabled = 1;
 
                     class LeftArm {
-                        displayName = "Sling Left Arm";
+                        displayName = CSTRING(Armband_Sling_Left_Arm);
                         condition = QUOTE(_player getVariable [ARR_2(QQGVAR(isLeftArmFree), false)]);
                         exceptions[] = {"isNotSwimming", "isNotInside", "notOnMap", "isNotSitting"};
                         statement = "";
                         showDisabled = 0;
-                        icon = QPATHTOF(ui\ArmbandLeftArm.paa); //TODO
+                        icon = QPATHTOF(ui\ArmbandLeftArm.paa);
 
                         class RedCross {
-                            displayName = "Red Cross";
+                            displayName = CSTRING(Armband_Red_Cross_ItemName);
                             condition = QUOTE([ARR_2(_player, ""kat_armband_red_cross"")] call ACEFUNC(common,hasItem));
                             exceptions[] = {"isNotSwimming", "isNotInside", "notOnMap", "isNotSitting"};
                             statement = QUOTE([ARR_3(_player, ""kat_armband_red_cross"", 0)] call FUNC(slingArmband));
                             showDisabled = 0;
-                            icon = QPATHTOF(ui\ArmbandWhiteCross.paa); //TODO
+                            icon = QPATHTOF(ui\ArmbandWhiteCross.paa);
                         };
 
                         class Medic {
-                            displayName = "Medic";
+                            displayName = CSTRING(Armband_Medic_ItemName);
                             condition = QUOTE([ARR_2(_player, ""kat_armband_medic"")] call ACEFUNC(common,hasItem));
                             exceptions[] = {"isNotSwimming", "isNotInside", "notOnMap", "isNotSitting"};
                             statement = QUOTE([ARR_3(_player, ""kat_armband_medic"", 0)] call FUNC(slingArmband));
                             showDisabled = 0;
-                            icon = QPATHTOF(ui\ArmbandWhiteCrossMedic.paa); //TODO
+                            icon = QPATHTOF(ui\ArmbandWhiteCrossMedic.paa);
                         };
 
                         class Doctor {
-                            displayName = "Doctor";
+                            displayName = CSTRING(Armband_Doctor_ItemName);
                             condition = QUOTE([ARR_2(_player, ""kat_armband_doctor"")] call ACEFUNC(common,hasItem));
                             exceptions[] = {"isNotSwimming", "isNotInside", "notOnMap", "isNotSitting"};
                             statement = QUOTE([ARR_3(_player, ""kat_armband_doctor"", 0)] call FUNC(slingArmband));
                             showDisabled = 0;
-                            icon = QPATHTOF(ui\ArmbandWhiteCrossDoctor.paa); //TODO
+                            icon = QPATHTOF(ui\ArmbandWhiteCrossDoctor.paa);
                         };
 
                         class Kat {
-                            displayName = "Kat Advanced Medical";
+                            displayName = CSTRING(Armband_Kat_ItemName);
                             condition = QUOTE([ARR_2(_player, ""kat_armband_kat"")] call ACEFUNC(common,hasItem));
                             exceptions[] = {"isNotSwimming", "isNotInside", "notOnMap", "isNotSitting"};
                             statement = QUOTE([ARR_3(_player, ""kat_armband_kat"", 0)] call FUNC(slingArmband));
                             showDisabled = 0;
-                            icon = QPATHTOF(ui\ArmbandKat.paa); //TODO
+                            icon = QPATHTOF(ui\ArmbandKat.paa);
                         };
                     }; 
 
                     class RightArm {
-                        displayName = "Sling Right Arm";
+                        displayName = CSTRING(Armband_Sling_Right_Arm);
                         condition = QUOTE(_player getVariable [ARR_2(QQGVAR(isRightArmFree), false)]);
                         exceptions[] = {"isNotSwimming", "isNotInside", "notOnMap", "isNotSitting"};
                         statement = "";
                         showDisabled = 0;
-                        icon = QPATHTOF(ui\ArmbandRightArm.paa); //TODO
+                        icon = QPATHTOF(ui\ArmbandRightArm.paa);
 
                         class RedCross {
-                            displayName = "Red Cross";
+                            displayName = CSTRING(Armband_Red_Cross_ItemName);
                             condition = QUOTE([ARR_2(_player, ""kat_armband_red_cross"")] call ACEFUNC(common,hasItem));
                             exceptions[] = {"isNotSwimming", "isNotInside", "notOnMap", "isNotSitting"};
                             statement = QUOTE([ARR_3(_player, ""kat_armband_red_cross"", 1)] call FUNC(slingArmband));
                             showDisabled = 0;
-                            icon = QPATHTOF(ui\ArmbandWhiteCross.paa); //TODO
+                            icon = QPATHTOF(ui\ArmbandWhiteCross.paa);
                         };
 
                         class Medic {
-                            displayName = "Medic";
+                            displayName = CSTRING(Armband_Medic_ItemName);
                             condition = QUOTE([ARR_2(_player, ""kat_armband_medic"")] call ACEFUNC(common,hasItem));
                             exceptions[] = {"isNotSwimming", "isNotInside", "notOnMap", "isNotSitting"};
                             statement = QUOTE([ARR_3(_player, ""kat_armband_medic"", 1)] call FUNC(slingArmband));
                             showDisabled = 0;
-                            icon = QPATHTOF(ui\ArmbandWhiteCrossMedic.paa); //TODO
+                            icon = QPATHTOF(ui\ArmbandWhiteCrossMedic.paa);
                         };
 
                         class Doctor {
-                            displayName = "Doctor";
+                            displayName = CSTRING(Armband_Doctor_ItemName);
                             condition = QUOTE([ARR_2(_player, ""kat_armband_doctor"")] call ACEFUNC(common,hasItem));
                             exceptions[] = {"isNotSwimming", "isNotInside", "notOnMap", "isNotSitting"};
                             statement = QUOTE([ARR_3(_player, ""kat_armband_doctor"", 1)] call FUNC(slingArmband));
                             showDisabled = 0;
-                            icon = QPATHTOF(ui\ArmbandWhiteCrossDoctor.paa); //TODO
+                            icon = QPATHTOF(ui\ArmbandWhiteCrossDoctor.paa);
                         };
 
                         class Kat {
-                            displayName = "Kat Advanced Medical";
+                            displayName = CSTRING(Armband_Kat_ItemName);
                             condition = QUOTE([ARR_2(_player, ""kat_armband_kat"")] call ACEFUNC(common,hasItem));
                             exceptions[] = {"isNotSwimming", "isNotInside", "notOnMap", "isNotSitting"};
                             statement = QUOTE([ARR_3(_player, ""kat_armband_kat"", 1)] call FUNC(slingArmband));
                             showDisabled = 0;
-                            icon = QPATHTOF(ui\ArmbandKat.paa); //TODO
+                            icon = QPATHTOF(ui\ArmbandKat.paa);
                         };
                     }; 
 
                     class LeftLeg {
-                        displayName = "Sling Left Leg";
+                        displayName = CSTRING(Armband_Sling_Left_Leg);
                         condition = QUOTE(_player getVariable [ARR_2(QQGVAR(isLeftLegFree), false)]);
                         exceptions[] = {"isNotSwimming", "isNotInside", "notOnMap", "isNotSitting"};
                         statement = "";
                         showDisabled = 0;
-                        icon = QPATHTOF(ui\ArmbandLeftLeg.paa); //TODO
+                        icon = QPATHTOF(ui\ArmbandLeftLeg.paa);
 
                         class RedCross {
-                            displayName = "Red Cross";
+                            displayName = CSTRING(Armband_Red_Cross_ItemName);
                             condition = QUOTE([ARR_2(_player, ""kat_armband_red_cross"")] call ACEFUNC(common,hasItem));
                             exceptions[] = {"isNotSwimming", "isNotInside", "notOnMap", "isNotSitting"};
                             statement = QUOTE([ARR_3(_player, ""kat_armband_red_cross"", 2)] call FUNC(slingArmband));
                             showDisabled = 0;
-                            icon = QPATHTOF(ui\ArmbandWhiteCross.paa); //TODO
+                            icon = QPATHTOF(ui\ArmbandWhiteCross.paa);
                         };
 
                         class Medic {
-                            displayName = "Medic";
+                            displayName = CSTRING(Armband_Medic_ItemName);
                             condition = QUOTE([ARR_2(_player, ""kat_armband_medic"")] call ACEFUNC(common,hasItem));
                             exceptions[] = {"isNotSwimming", "isNotInside", "notOnMap", "isNotSitting"};
                             statement = QUOTE([ARR_3(_player, ""kat_armband_medic"", 2)] call FUNC(slingArmband));
                             showDisabled = 0;
-                            icon = QPATHTOF(ui\ArmbandWhiteCrossMedic.paa); //TODO
+                            icon = QPATHTOF(ui\ArmbandWhiteCrossMedic.paa);
                         };
 
                         class Doctor {
-                            displayName = "Doctor";
+                            displayName = CSTRING(Armband_Doctor_ItemName);
                             condition = QUOTE([ARR_2(_player, ""kat_armband_doctor"")] call ACEFUNC(common,hasItem));
                             exceptions[] = {"isNotSwimming", "isNotInside", "notOnMap", "isNotSitting"};
                             statement = QUOTE([ARR_3(_player, ""kat_armband_doctor"", 2)] call FUNC(slingArmband));
                             showDisabled = 0;
-                            icon = QPATHTOF(ui\ArmbandWhiteCrossDoctor.paa); //TODO
+                            icon = QPATHTOF(ui\ArmbandWhiteCrossDoctor.paa);
                         };
 
                         class Kat {
-                            displayName = "Kat Advanced Medical";
+                            displayName = CSTRING(Armband_Kat_ItemName);
                             condition = QUOTE([ARR_2(_player, ""kat_armband_kat"")] call ACEFUNC(common,hasItem));
                             exceptions[] = {"isNotSwimming", "isNotInside", "notOnMap", "isNotSitting"};
                             statement = QUOTE([ARR_3(_player, ""kat_armband_kat"", 2)] call FUNC(slingArmband));
                             showDisabled = 0;
-                            icon = QPATHTOF(ui\ArmbandKat.paa); //TODO
+                            icon = QPATHTOF(ui\ArmbandKat.paa);
                         };
                     }; 
 
                     class RightLeg {
-                        displayName = "Sling Right Leg";
+                        displayName = CSTRING(Armband_Sling_Right_Leg);
                         condition = QUOTE(_player getVariable [ARR_2(QQGVAR(isRightLegFree), false)]);
                         exceptions[] = {"isNotSwimming", "isNotInside", "notOnMap", "isNotSitting"};
                         statement = "";
                         showDisabled = 0;
-                        icon = QPATHTOF(ui\ArmbandRightLeg.paa); //TODO
+                        icon = QPATHTOF(ui\ArmbandRightLeg.paa);
 
                         class RedCross {
-                            displayName = "Red Cross";
+                            displayName = CSTRING(Armband_Red_Cross_ItemName);
                             condition = QUOTE([ARR_2(_player, ""kat_armband_red_cross"")] call ACEFUNC(common,hasItem));
                             exceptions[] = {"isNotSwimming", "isNotInside", "notOnMap", "isNotSitting"};
                             statement = QUOTE([ARR_3(_player, ""kat_armband_red_cross"", 3)] call FUNC(slingArmband));
                             showDisabled = 0;
-                            icon = QPATHTOF(ui\ArmbandWhiteCross.paa); //TODO
+                            icon = QPATHTOF(ui\ArmbandWhiteCross.paa);
                         };
 
                         class Medic {
-                            displayName = "Medic";
+                            displayName = CSTRING(Armband_Medic_ItemName);
                             condition = QUOTE([ARR_2(_player, ""kat_armband_medic"")] call ACEFUNC(common,hasItem));
                             exceptions[] = {"isNotSwimming", "isNotInside", "notOnMap", "isNotSitting"};
                             statement = QUOTE([ARR_3(_player, ""kat_armband_medic"", 3)] call FUNC(slingArmband));
                             showDisabled = 0;
-                            icon = QPATHTOF(ui\ArmbandWhiteCrossMedic.paa); //TODO
+                            icon = QPATHTOF(ui\ArmbandWhiteCrossMedic.paa);
                         };
 
                         class Doctor {
-                            displayName = "Doctor";
+                            displayName = CSTRING(Armband_Doctor_ItemName);
                             condition = QUOTE([ARR_2(_player, ""kat_armband_doctor"")] call ACEFUNC(common,hasItem));
                             exceptions[] = {"isNotSwimming", "isNotInside", "notOnMap", "isNotSitting"};
                             statement = QUOTE([ARR_3(_player, ""kat_armband_doctor"", 3)] call FUNC(slingArmband));
                             showDisabled = 0;
-                            icon = QPATHTOF(ui\ArmbandWhiteCrossDoctor.paa); //TODO
+                            icon = QPATHTOF(ui\ArmbandWhiteCrossDoctor.paa);
                         };
 
                         class Kat {
-                            displayName = "Kat Advanced Medical";
+                            displayName = CSTRING(Armband_Kat_ItemName);
                             condition = QUOTE([ARR_2(_player, ""kat_armband_kat"")] call ACEFUNC(common,hasItem));
                             exceptions[] = {"isNotSwimming", "isNotInside", "notOnMap", "isNotSitting"};
                             statement = QUOTE([ARR_3(_player, ""kat_armband_kat"", 3)] call FUNC(slingArmband));
                             showDisabled = 0;
-                            icon = QPATHTOF(ui\ArmbandKat.paa); //TODO
+                            icon = QPATHTOF(ui\ArmbandKat.paa);
                         };
                     };
 
                     class UnSlingLeftArm {
-                        displayName = "Unsling Left Arm";
+                        displayName = CSTRING(Armband_UnSling_Left_Arm);
                         condition = QUOTE(!(_player getVariable [ARR_2(QQGVAR(isLeftArmFree), false)]));
                         exceptions[] = {"isNotSwimming", "isNotInside", "notOnMap", "isNotSitting"};
                         statement = QUOTE([ARR_2(_player, 0)] call FUNC(unSlingArmband));
                         showDisabled = 0;
-                        icon = QPATHTOF(ui\ArmbandLeftArm.paa); //TODO
+                        icon = QPATHTOF(ui\ArmbandLeftArm.paa);
                     }; 
 
                     class UnSlingRightArm {
-                        displayName = "Unsling Right Arm";
+                        displayName = CSTRING(Armband_UnSling_Right_Arm);
                         condition = QUOTE(!(_player getVariable [ARR_2(QQGVAR(isRightArmFree), false)]));
                         exceptions[] = {"isNotSwimming", "isNotInside", "notOnMap", "isNotSitting"};
                         statement = QUOTE([ARR_2(_player, 1)] call FUNC(unSlingArmband));
                         showDisabled = 0;
-                        icon = QPATHTOF(ui\ArmbandRightArm.paa); //TODO
+                        icon = QPATHTOF(ui\ArmbandRightArm.paa);
                     }; 
 
                     class UnSlingLeftLeg {
-                        displayName = "Unsling Left Leg";
+                        displayName = CSTRING(Armband_UnSling_Left_Leg);
                         condition = QUOTE(!(_player getVariable [ARR_2(QQGVAR(isLeftLegFree), false)]));
                         exceptions[] = {"isNotSwimming", "isNotInside", "notOnMap", "isNotSitting"};
                         statement = QUOTE([ARR_2(_player, 2)] call FUNC(unSlingArmband));
                         showDisabled = 0;
-                        icon = QPATHTOF(ui\ArmbandLeftLeg.paa); //TODO
+                        icon = QPATHTOF(ui\ArmbandLeftLeg.paa);
                     }; 
 
                     class UnSlingRightLeg {
-                        displayName = "Unsling Right Leg";
+                        displayName = CSTRING(Armband_UnSling_Right_Leg);
                         condition = QUOTE(!(_player getVariable [ARR_2(QQGVAR(isRightLegFree), false)]));
                         exceptions[] = {"isNotSwimming", "isNotInside", "notOnMap", "isNotSitting"};
                         statement = QUOTE([ARR_2(_player, 3)] call FUNC(unSlingArmband));
                         showDisabled = 0;
-                        icon = QPATHTOF(ui\ArmbandRightLeg.paa); //TODO
+                        icon = QPATHTOF(ui\ArmbandRightLeg.paa);
                     };
                 };
             };

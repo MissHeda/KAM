@@ -43,21 +43,69 @@ class CfgWeapons
     class ItemCore;
 	class InventoryItem_Base_F;
 
-	 class Medic_armband_item: ItemCore {
+	 class kat_Armband_Red_Cross_Item: ItemCore {
 
-        type = 4096;
         detectRange = -1;
-        author = "Digii, Miss Heda";
+        author = "Miss Heda, vccv9040 (Swedish Forces Pack)";
         simulation = "ItemMineDetector";
-        displayName = CSTRING(Medic_Bag_Display);  //TODO
-        descriptionShort = CSTRING(Medic_Bag_Desc);  //TODO
+        displayName = CSTRING(Armband_Red_Cross_ItemName);
         scope = 2;
-        cost = 20;
+        cost = 2;
         side = 3;
-        allowedslots[] = {901};
         model = QPATHTOF(models\armband\armband.p3d);
         editorPreview = QPATHTOF(ui\ArmbandWhiteCross.paa);
         picture = QPATHTOF(ui\ArmbandWhiteCross.paa);
+        class ItemInfo: InventoryItem_Base_F {
+            mass = 3;
+        };
+    };
+
+    class kat_Armband_Medic_Item: ItemCore {
+
+        detectRange = -1;
+        author = "Miss Heda, vccv9040 (Swedish Forces Pack)";
+        simulation = "ItemMineDetector";
+        displayName = CSTRING(Armband_Medic_ItemName);
+        scope = 2;
+        cost = 2;
+        side = 3;
+        model = QPATHTOF(models\armband\armband.p3d);
+        editorPreview = QPATHTOF(ui\ArmbandWhiteCrossMedic.paa);
+        picture = QPATHTOF(ui\ArmbandWhiteCrossMedic.paa);
+        class ItemInfo: InventoryItem_Base_F {
+            mass = 3;
+        };
+    };
+
+    class kat_Armband_Doctor_Item: ItemCore {
+
+        detectRange = -1;
+        author = "Miss Heda, vccv9040 (Swedish Forces Pack)";
+        simulation = "ItemMineDetector";
+        displayName = CSTRING(Armband_Doctor_ItemName);
+        scope = 2;
+        cost = 2;
+        side = 3;
+        model = QPATHTOF(models\armband\armband.p3d);
+        editorPreview = QPATHTOF(ui\ArmbandWhiteCrossDoctor.paa);
+        picture = QPATHTOF(ui\ArmbandWhiteCrossDoctor.paa);
+        class ItemInfo: InventoryItem_Base_F {
+            mass = 3;
+        };
+    };
+
+    class kat_Armband_Kat_Item: ItemCore {
+
+        detectRange = -1;
+        author = "Miss Heda, vccv9040 (Swedish Forces Pack)";
+        simulation = "ItemMineDetector";
+        displayName = CSTRING(Armband_Kat_ItemName);
+        scope = 2;
+        cost = 2;
+        side = 3;
+        model = QPATHTOF(models\armband\armband.p3d);
+        editorPreview = QPATHTOF(ui\ArmbandKat.paa);
+        picture = QPATHTOF(ui\ArmbandKat.paa);
         class ItemInfo: InventoryItem_Base_F {
             mass = 3;
         };
