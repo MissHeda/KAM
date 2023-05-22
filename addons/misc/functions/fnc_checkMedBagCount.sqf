@@ -1,5 +1,20 @@
 #include "script_component.hpp"
-//Header to be added!
+/*
+ * Author: Digii, Miss Heda
+ * TO BE ADDED ! ! !    TODO
+ *
+ * Arguments:
+ * 0: Player
+ * 1: Object
+ * 
+ * Return Value:
+ * None
+ *
+ * Example:
+ * [player, cursorTarget] call kat_misc_fnc_checkMedBagCount;
+ *
+ * Public: No
+ */
 
 params ["_unit","_container"];
 

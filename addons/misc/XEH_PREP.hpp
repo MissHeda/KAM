@@ -3,7 +3,6 @@ PREP(addActionRaise);
 PREP(addIVbag);
 PREP(addPassengersActions);
 PREP(attachStretcher);
-PREP(checkMedBagCount);
 PREP(conditionIV);
 PREP(conditionIVstand);
 PREP(handleRespawn);

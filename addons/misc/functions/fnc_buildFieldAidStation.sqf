@@ -1,4 +1,20 @@
 #include "script_component.hpp"
+/*
+ * Author: Digii, Miss Heda
+ * Builds a field aid station that is marked as a medical facility.
+ *
+ * Arguments:
+ * 0: Player
+ * 1: Object
+ * 
+ * Return Value:
+ * None
+ *
+ * Example:
+ * [player, cursorTarget] call kat_misc_fnc_buildFieldAidStation;
+ *
+ * Public: No
+ */
 
 params["_unit","_target"];
 

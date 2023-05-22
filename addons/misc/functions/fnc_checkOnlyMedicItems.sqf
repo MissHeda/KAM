@@ -1,4 +1,21 @@
 #include "script_component.hpp"
+/*
+ * Author: Digii, Miss Heda
+ * Checks if a item is in the allowed medical items array. If not it deletes it and replaces it.
+ *
+ * Arguments:
+ * 0: Player
+ * 1: Object
+ * 2: String
+ * 
+ * Return Value:
+ * None
+ *
+ * Example:
+ * [player, cursorTarget, "kat_armband_doctor"] call kat_misc_fnc_checkOnlyMedicItems;
+ *
+ * Public: No
+ */
 
 params ["_unit", "_container", "_item"];
 
@@ -47,78 +64,3 @@ if !(_item in GVAR(DefaultAllowedMedicItems)) then {
 		}; 
 	};
 };
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-///[{
-///
-///	params ["_args", "_pfhID"];
-///	_args params ["_unit", "_container"];
-///
-///	if (!(isnull (findDisplay 602))) then {
-///		if (ctrlShown ((findDisplay 602) displayCtrl 640)) then {
-///
-///			systemChat "Nenn es wie du willst";
-///			//Removes everything that is not whitelisted as a Medic Item and returns it if possible. 
-///			private _playerItems = items _unit;
-///			{
-///				if !(_x in GVAR(DefaultAllowedMedicItems)) then {
-///					[_container, _x] call CBA_fnc_removeItemCargo;
-///					_unit addItem _x;
-///				};
-///			} foreach _playerItems;
-///
-///			private _playerMags = magazines _unit;
-///			{
-///				if !(_x in GVAR(DefaultAllowedMedicItems)) then {
-///					[_container, _x, 1] call CBA_fnc_removeMagazineCargo;
-///					_unit addMagazine [_x, 1];
-///				};
-///			} foreach _playerMags;
-///
-///			//Removes everything that is not allowed if somehow something slips
-///			private _deleteNotAllowedItems = items _container;
-///			{
-///				if !(_x in GVAR(DefaultAllowedMedicItems)) then {
-///					[_container, _x] call CBA_fnc_removeItemCargo;
-///				};
-///			} foreach _deleteNotAllowedItems;
-///
-///			private _deleteNotAllowedMags = items _container;
-///			{
-///				if !(_x in GVAR(DefaultAllowedMedicItems)) then {
-///					[_container, _x] call CBA_fnc_removeMagazineCargo;
-///				};
-///			} foreach _deleteNotAllowedMags;
-///
-///		};
-///	}else{
-///		[_pfhID] call CBA_fnc_removePerFrameHandler;
-///	};
-///
-///
-///}, 0.5, [_unit, _container]] call CBA_fnc_addPerFrameHandler;
