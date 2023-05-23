@@ -31,7 +31,7 @@ if(_unit getVariable [QGVAR(itemsBackpack), []] != (backpackItems _unit)) then {
 
 	if(_countMedBag > 1) then {
         for "_i" from 1 to _countMedBag -1 step 1 do {
-             _unit removeItem "Medic_Bag";
+            _unit removeItem "Medic_Bag";
         };
 	};
 

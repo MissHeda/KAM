@@ -77,15 +77,27 @@ PREP_RECOMPILE_END;
     2
 ] call CBA_Settings_fnc_init;
 
+//Adjust armband sling left arm (x, y, z)
 [
     QGVAR(armbandSlingLeftArm),
     "EDITBOX",
     [LLSTRING(SETTING_ArmbandSlingLeftArmPos_Display), LLSTRING(SETTING_ArmbandSlingLeftArmPos_Desc)],
     [CBA_SETTINGS_CAT, LSTRING(SubCategory_Armband)],
-    "-0.228, -0.087, -0.45",
+    "0.23, 0.088, -0.45",
     2
 ] call CBA_Settings_fnc_init;
 
+//Adjust armband rotation left arm (yaw, pitch, roll)
+[
+    QGVAR(armbandSlingLeftArmRotation),
+    "EDITBOX",
+    [LLSTRING(SETTING_ArmbandSlingLeftArmRot_Display), LLSTRING(SETTING_ArmbandSlingLeftArmRot_Desc)],
+    [CBA_SETTINGS_CAT, LSTRING(SubCategory_Armband)],
+    "180, -5, 0",
+    2
+] call CBA_Settings_fnc_init;
+
+//Adjust armband sling right arm (x, y, z)
 [
     QGVAR(armbandSlingRightArm),
     "EDITBOX",
@@ -95,6 +107,17 @@ PREP_RECOMPILE_END;
     2
 ] call CBA_Settings_fnc_init;
 
+//Adjust armband rotation right arm (yaw, pitch, roll)
+[
+    QGVAR(armbandSlingRightArmRotation),
+    "EDITBOX",
+    [LLSTRING(SETTING_ArmbandSlingRightArmRot_Display), LLSTRING(SETTING_ArmbandSlingRightArmRot_Desc)],
+    [CBA_SETTINGS_CAT, LSTRING(SubCategory_Armband)],
+    "5, -5, -5",
+    2
+] call CBA_Settings_fnc_init;
+
+//Adjust armband sling left leg (x, y, z)
 [
     QGVAR(armbandSlingLeftLeg),
     "EDITBOX",
@@ -104,12 +127,33 @@ PREP_RECOMPILE_END;
     2
 ] call CBA_Settings_fnc_init;
 
+//Adjust armband rotation left leg (yaw, pitch, roll)
+[
+    QGVAR(armbandSlingLeftLegRotation),
+    "EDITBOX",
+    [LLSTRING(SETTING_ArmbandSlingLeftLegRot_Display), LLSTRING(SETTING_ArmbandSlingLeftLegRot_Desc)],
+    [CBA_SETTINGS_CAT, LSTRING(SubCategory_Armband)],
+    "-160, -5, 45",
+    2
+] call CBA_Settings_fnc_init;
+
+//Adjust armband sling right leg (x, y, z)
 [
     QGVAR(armbandSlingRightLeg),
     "EDITBOX",
     [LLSTRING(SETTING_ArmbandSlingRightLegPos_Display), LLSTRING(SETTING_ArmbandSlingRightLegPos_Desc)],
     [CBA_SETTINGS_CAT, LSTRING(SubCategory_Armband)],
     "-0.32, -0.29, -0.42",
+    2
+] call CBA_Settings_fnc_init;
+
+//Adjust armband rotation right Leg (yaw, pitch, roll)
+[
+    QGVAR(armbandSlingRightLegRotation),
+    "EDITBOX",
+    [LLSTRING(SETTING_ArmbandSlingRightLegRot_Display), LLSTRING(SETTING_ArmbandSlingRightLegRot_Desc)],
+    [CBA_SETTINGS_CAT, LSTRING(SubCategory_Armband)],
+    "-30, -5, 38",
     2
 ] call CBA_Settings_fnc_init;
 

@@ -537,8 +537,8 @@
             <German>Hinzufügen von erlaubten medic Gegenständen</German>
         </Key>
         <Key ID="STR_kat_misc_Add_Allowed_Medical_Item_Desc">
-            <English>Allows you to add custom items that are allowed in the Medic bag. All KAM/ACE medic items are already added. Example of how to use:  "Titan_AA", "ACE_Banana", "ACE_WaterBottle"</English>
-            <German>Erlaubt dir eigene Gegenstände hinzuzufügen die erlaubt sind in der Sanitätstasche. Alle KAM/ACE Medic Items sind bereits hinzugefügt. Beispiel zur benutzung:  "Titan_AA", "ACE_Banana", "ACE_WaterBottle"</German>
+            <English>Allows you to add custom items that are allowed in the Medic bag. All KAM/ACE medic items are already added. Example of how to use:\n"Titan_AA", "ACE_Banana", "ACE_WaterBottle"</English>
+            <German>Erlaubt dir eigene Gegenstände hinzuzufügen die erlaubt sind in der Sanitätstasche. Alle KAM/ACE Medic Items sind bereits hinzugefügt.\nBeispiel zur benutzung:  "Titan_AA", "ACE_Banana", "ACE_WaterBottle"</German>
         </Key>
         <Key ID="STR_kat_misc_SubCategory_Armband">
             <English>Armband</English>
@@ -549,32 +549,64 @@
             <German>Armband Position linker Arm</German>
         </Key>
         <Key ID="STR_kat_misc_SETTING_ArmbandSlingLeftArmPos_Desc">
-            <English>Defines the position where the armband is slinged to, at the left arm.</English>
-            <German>Defeniert die Position wo das Armband rangebunden wird am linken Arm.</German>
+            <English>Defines the position (x, y, z) where the armband is slinged to, at the left arm.</English>
+            <German>Defeniert die Position (x, y, z) wo das Armband rangebunden wird am linken Arm.</German>
+        </Key>
+        <Key ID="STR_kat_misc_SETTING_ArmbandSlingLeftArmRot_Display">
+            <English>Armband rotation left arm</English>
+            <German>Armband Rotation linker Arm</German>
+        </Key>
+        <Key ID="STR_kat_misc_SETTING_ArmbandSlingLeftArmRot_Desc">
+            <English>Defines the rotation (yaw, pitch, roll) of the armband that is slinged, to the left arm.</English>
+            <German>Defeniert die Rotation (yaw, pitch, roll) des Armbandes am linken Arm.</German>
         </Key>
         <Key ID="STR_kat_misc_SETTING_ArmbandSlingRightArmPos_Display">
             <English>Armband position right arm</English>
             <German>Armband Position rechter Arm</German>
         </Key>
         <Key ID="STR_kat_misc_SETTING_ArmbandSlingRightArmPos_Desc">
-            <English>Defines the position where the armband is slinged to, at the right arm.</English>
-            <German>Defeniert die Position wo das Armband rangebunden wird am rechten Arm.</German>
+            <English>Defines the position (x, y, z) where the armband is slinged to, at the right arm.</English>
+            <German>Defeniert die Position (x, y, z) wo das Armband rangebunden wird am rechten Arm.</German>
+        </Key>
+        <Key ID="STR_kat_misc_SETTING_ArmbandSlingRightArmRot_Display">
+            <English>Armband rotation right arm</English>
+            <German>Armband Rotation rechten Arm</German>
+        </Key>
+        <Key ID="STR_kat_misc_SETTING_ArmbandSlingRightArmRot_Desc">
+            <English>Defines the rotation (yaw, pitch, roll) of the armband that is slinged, to the right arm.</English>
+            <German>Defeniert die Rotation (yaw, pitch, roll) des Armbandes am rechten Arm.</German>
         </Key>
         <Key ID="STR_kat_misc_SETTING_ArmbandSlingLeftLegPos_Display">
             <English>Armband position left leg</English>
             <German>Armband Position linkes Bein</German>
         </Key>
         <Key ID="STR_kat_misc_SETTING_ArmbandSlingLeftLegPos_Desc">
-            <English>Defines the position where the armband is slinged to, at the left leg.</English>
-            <German>Defeniert die Position wo das Armband rangebunden wird am linken bein.</German>
+            <English>Defines the position (x, y, z) where the armband is slinged to, at the left leg.</English>
+            <German>Defeniert die Position (x, y, z) wo das Armband rangebunden wird am linken bein.</German>
+        </Key>
+        <Key ID="STR_kat_misc_SETTING_ArmbandSlingLeftLegRot_Display">
+            <English>Armband rotation left leg</English>
+            <German>Armband Rotation linkes Bein</German>
+        </Key>
+        <Key ID="STR_kat_misc_SETTING_ArmbandSlingLeftLegRot_Desc">
+            <English>Defines the rotation (yaw, pitch, roll) of the armband that is slinged, to the left leg.</English>
+            <German>Defeniert die Rotation (yaw, pitch, roll) des Armbandes am linken Bein.</German>
         </Key>
         <Key ID="STR_kat_misc_SETTING_ArmbandSlingRightLegPos_Display">
             <English>Armband position right leg</English>
             <German>Armband Position rechtes Bein</German>
         </Key>
         <Key ID="STR_kat_misc_SETTING_ArmbandSlingRightLegPos_Desc">
-            <English>Defines the position where the armband is slinged to, at the right leg.</English>
-            <German>Defeniert die Position wo das Armband rangebunden wird am rechten bein.</German>
+            <English>Defines the position (x, y, z) where the armband is slinged to, at the right leg.</English>
+            <German>Defeniert die Position (x, y, z) wo das Armband rangebunden wird am rechten bein.</German>
+        </Key>
+        <Key ID="STR_kat_misc_SETTING_ArmbandSlingRightLegRot_Display">
+            <English>Armband rotation right leg</English>
+            <German>Armband Rotation rechtes Bein</German>
+        </Key>
+        <Key ID="STR_kat_misc_SETTING_ArmbandSlingRightLegRot_Desc">
+            <English>Defines the rotation (yaw, pitch, roll) of the armband that is slinged, to the right leg.</English>
+            <German>Defeniert die Rotation (yaw, pitch, roll) des Armbandes am rechten Bein.</German>
         </Key>
         <Key ID="STR_kat_misc_Armband_Red_Cross_ItemName">
             <English>Armband Red Cross</English>
