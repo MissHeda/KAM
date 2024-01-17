@@ -1199,7 +1199,7 @@
         <Key ID="STR_KAT_Misc_SETTING_FAK_RemoveWhenEmpty">
             <English>Remove when empty</English>
             <German>Lösche wenn leer</German>
-            <Japanese>空になったら削除</Japanese>
+            <Japanese>空になったら削除する</Japanese>
             <French>Retirer lorsque vide</French>
         </Key>
         <Key ID="STR_KAT_Misc_CarryPatient">
